@@ -141,8 +141,8 @@ def main():
 {dns_domain}.       IN      NS      {ns2_domain}.
 *.{dns_domain}.       IN      NS      {ns1_domain}.
 *.{dns_domain}.       IN      NS      {ns2_domain}.
-*.{dns_domain}.       IN      A       {server_ip}
-{dns_domain}.         IN      A       {server_ip}
+*.{dns_domain}.       IN      CNAME       {server_ip}
+{dns_domain}.         IN      CNAME       {server_ip}
 '''.format(
         dns_domain=settings.DNS_DOMAIN,
         ns1_domain=settings.NS1_DOMAIN,
